@@ -26,6 +26,7 @@ class adminController extends Controller
     }
     public function storepredict(Request $request)
     {
+        set_time_limit(300);
         $response = Http::get('https://adhd-api.herokuapp.com/predictA', [
             'train' => $request->input('train'),
             'test' => $request->input('test'),
