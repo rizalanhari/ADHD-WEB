@@ -25,7 +25,7 @@ class userController extends Controller
     }
     public function storepredict(Request $request)
     {
-        set_time_limit(300);
+        set_time_limit(1000);
         unset($arr);
         for ($i = 0; $i < 45; $i++) {
             $arr['data' . $i] = (int)$request->input('pertanyaan' . $i);
